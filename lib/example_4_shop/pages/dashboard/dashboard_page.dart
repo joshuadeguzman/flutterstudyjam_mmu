@@ -58,14 +58,7 @@ class _DashboardPageState extends State<DashboardPage> {
                     CheckoutPage.routeName,
                   )
                 : null,
-            child: Text(
-              cartViewModel.cartLabel,
-              style: TextStyle(
-                color: cartViewModel.enableCheckoutButton
-                    ? Colors.white
-                    : Colors.grey,
-              ),
-            ),
+            child: Container(), // TODO: Step 2
           ),
         ],
       ),
@@ -74,14 +67,7 @@ class _DashboardPageState extends State<DashboardPage> {
           physics: NeverScrollableScrollPhysics(),
           controller: pageController,
           children: [
-            ChangeNotifierProvider(
-              create: (_) => ShopViewModel(),
-              child: Shop(),
-            ),
-            ChangeNotifierProvider(
-              create: (_) => ShopHistoryViewModel(),
-              child: ShopHistory(),
-            ),
+            // TODO: Step 3
           ],
         ),
       ),
